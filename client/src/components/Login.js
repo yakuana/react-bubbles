@@ -21,7 +21,7 @@ const Login = (props) => {
             console.log("post login api response object", response);
       
             localStorage.setItem('token', response.data.payload);
-            props.history.push('/');
+            props.history.push('/bubbles');
         }) 
 
         .catch(error => {
