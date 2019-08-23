@@ -7,9 +7,7 @@ const Login = () => {
 
   const [user, setUser] = useState({ username: '', password: ''});
   
-
   const handleChange = event => setUser({...user, [event.target.name]: event.target.value});
-
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -19,8 +17,8 @@ const Login = () => {
         .then(response => {
             // successful 
             console.log("post login api response object", response);
-            
-            // localStorage.setItem('token', response.data.payload);
+      
+            localStorage.setItem('token', response.data.payload);
         }) 
 
         .catch(error => {
