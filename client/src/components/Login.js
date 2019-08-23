@@ -5,11 +5,13 @@ const Login = (props) => {
   // make a post request to retrieve a token from the api
   // when you have handled the token, navigate to the BubblePage route
 
-  console.log(props)
+  console.log("login props", props)
 
   const [user, setUser] = useState({ username: '', password: ''});
   
-  const handleChange = event => setUser({...user, [event.target.name]: event.target.value});
+  const handleChange = event => {
+    setUser({...user, [event.target.name]: event.target.value})
+  };
 
   const handleSubmit = event => {
     event.preventDefault();
